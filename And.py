@@ -2,6 +2,7 @@ from utils.model import Perceptron
 from utils.all_utils import prepare_data,save_model,save_plot
 import pandas as pd
 import numpy as np
+import joblib
 AND = {
     "x1": [0,0,1,1],
     "x2": [0,1,0,1],
@@ -21,5 +22,5 @@ model.fit(X, y)
 
 _ = model.total_loss()
 
-save_model(model,file_name= "And.model")
+save_model(model, filename = "And.model")
 save_plot (df,"And.png",model)
